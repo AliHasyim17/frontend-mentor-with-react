@@ -94,6 +94,7 @@
         grid-column-start: 1;
         grid-column-end: 4;
         grid-row-end: 5;
+        margin-left: 0;
     }
     .box3{
         grid-column-end: 4;

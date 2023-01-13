@@ -1,17 +1,18 @@
 import './styles/App.css';
 import './styles/responsive.css';
 import {contents, menus, news} from './data'
+import './index.js'
 
 function App() {
   return (
-    <body className='font-inter box-border p-0 m-0'>
+    <div className='font-inter box-border p-0 m-0'>
       <div className="wrapper grid grid-cols-3 p-[16px]">
         <div className="box1 col-start-1 col-end-4 flex items-center justify-between">
           <div className="logo text-[60px] font-extrabold">
                 <a href>W.</a>
           </div>
 
-          <div className="hamburger hidden" onclick="show()">
+          <div className="hamburger hidden" onClick="show()">
                 <div id="line1" className="line"></div>
                 <div id="line2" className="line"></div>
                 <div id="line3" className="line"></div>
@@ -28,20 +29,20 @@ function App() {
           </nav>
         </div>
 
-        <div className="box2 col-start-3 row-start-2 row-end-4 bg-very-dark-blue p-[15px] text-white">
+        <div className="box2 col-start-3 row-start-2 row-end-4 bg-very-dark-blue p-[15px] text-white ml-10">
           <h1 className='text-soft-orange text-[30px]'>New</h1>
           {news.map((box) => (
             <div key={box.title}>
               <h3 className='hover:cursor-pointer hover:text-soft-orange'>{box.title}</h3>
               <p className='text-dark-grayish-blue pb-2.5 text-sm'>{box.desc}</p>
-              <div class="barr border-b"> </div>
+              <div className="barr border-b b-10"> </div>
             </div>
           ))}
         </div>
 
         <div className="box3 col-start-1 col-end-3">
-            <img className="img1" src="./images/image-web-3-dekstop.jpg" alt=""/>
-            {/* <img class="img2" src="./images/image-web-3-mobile.jpg" alt=""> */}
+            <img className="img1" src={require("./images/image-web-3-desktop.jpg")} alt=""/>
+            <img className="img2" src={require("./images/image-web-3-mobile.jpg")} alt=""/>
         </div>
 
         <div className="box4">
@@ -56,7 +57,7 @@ function App() {
             </div>  
         </div>
 
-        <div className="box6 flex col-start-1 col-end-4">
+        <div className="box6 flex col-start-1 col-end-4 mt-10">
           {contents.map((content) => (
               <div key={content.title}>
                 <img src={content.image} alt={content.desc} className='h-[150px] float-left mr-[10px]'/>
@@ -67,7 +68,7 @@ function App() {
             ))}
         </div>
       </div>
-    </body>
+    </div>
   );
 }
 
