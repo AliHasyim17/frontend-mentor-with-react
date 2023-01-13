@@ -29,7 +29,7 @@ function App() {
           </nav>
         </div>
 
-        <div className="box2 col-start-3 row-start-2 row-end-4 bg-very-dark-blue p-[15px] text-white ml-10">
+        <div className="box2 col-start-3 row-start-2 row-end-4 bg-very-dark-blue p-[15px] text-white ml-1">
           <h1 className='text-soft-orange text-[30px]'>New</h1>
           {news.map((box) => (
             <div key={box.title}>
